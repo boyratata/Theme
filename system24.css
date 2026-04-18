@@ -1,4 +1,4 @@
-/* main.css — modified system24 build */
+/* main.css  */
 @import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
@@ -47,7 +47,6 @@ body {
 
     --small-user-panel: on;
 
-    /* KEY CHANGE: off = rounded panels, normal circular avatars */
     --unrounding: off;
 
     --custom-spotify-bar: on;
@@ -69,17 +68,16 @@ body {
     --text-4: hsl(220, 12%, 40%);
     --text-5: hsl(220, 12%, 25%);
 
-    /* #0C0D12 background ramp */
     --bg-1: hsl(228, 16%, 22%);
     --bg-2: hsl(228, 16%, 17%);
     --bg-3: hsl(228, 18%, 12%);
-    --bg-4: hsl(230, 23%, 6%);
+    --bg-4: #0C0D12;           
+
     --hover:    hsla(228, 20%, 50%, 0.07);
     --active:   hsla(228, 20%, 50%, 0.13);
     --active-2: hsla(228, 20%, 50%, 0.22);
     --message-hover: hsla(230, 0%, 0%, 0.08);
 
-    /* powder blue accents */
     --accent-1: var(--blue-1);
     --accent-2: var(--blue-2);
     --accent-3: var(--blue-3);
@@ -114,7 +112,6 @@ body {
     --green-4: oklch(60% 0.12 170);
     --green-5: oklch(55% 0.12 160);
 
-    /* powder blue */
     --blue-1: oklch(83% 0.06 210);
     --blue-2: oklch(77% 0.07 210);
     --blue-3: oklch(71% 0.08 210);
@@ -134,6 +131,16 @@ body {
     --purple-5: oklch(55% 0.12 310);
 }
 
+* {
+    font-family: 'Comfortaa', sans-serif !important;
+    font-weight: 600 !important;
+}
+code, code *,
+pre, pre * {
+    font-family: 'DM Mono', monospace !important;
+    font-weight: 400 !important;
+}
+
 body {
     --custom-chatbar: separated !important;
     --chatbar-height: 56px !important;
@@ -145,7 +152,6 @@ body {
     .container__37e49 { padding: 8px; }
 }
 
-/* ascii — both off, comfortaa doesn't suit ascii */
 @property --ascii-titles {
     syntax: 'off | on';
     inherits: false;
@@ -157,7 +163,6 @@ body {
     initial-value: off;
 }
 
-/* colors.css */
 @container root style(--colors: on) {
     #app-mount .wrapper__44b0c,
     #app-mount .container__1ce5d {
@@ -169,7 +174,6 @@ body {
     }
 }
 
-/* panel-labels.css */
 body {
     --label-color: var(--text-muted);
     --label-hover-color: var(--accent-2);
@@ -283,14 +287,13 @@ body {
     }
 }
 
-/* unrounding.css — property declared, initial-value OFF so rounded panels stay */
+/* unrounding.css */
 @property --unrounding {
     syntax: 'off | on';
     inherits: false;
     initial-value: off;
 }
 
-/* the on-block is kept intact so toggling on still works if user wants it */
 @container body style(--unrounding: on) {
     *, *::before, *::after { border-radius: 0 !important; }
 
